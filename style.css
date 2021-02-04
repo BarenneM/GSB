@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500&display=swap');
+/* 
+font-family: 'Open Sans', sans-serif;
+font-family: 'Space Grotesk', sans-serif;
+*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 72;
+}
+h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 48;
+}
+h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32;
+}
+h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24;
+}
+
+.paragraphe {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20;
+}
+
+.paragrapheItalic {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 20;
+}
+
+.paragrapheBold {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20;
+}
+
+header {
+    background-color: #474350;
+}
+
+nav, ul
+{
+    display: flex;
+}
+
+nav
+{
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+li
+{
+    list-style: none;
+    margin: 4em;
+}
+
+ul
+{
+    font-weight: 100;
+}
+
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover
+{
+text-decoration: none;
+}
+
+body {
+    background-color: #625D6F;
+}
+
+#conteneurHaut {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3em;
+    color: white;
+}
+
+.bouton {
+    border-radius: 2em;
+    height: 3.5em;
+    width: 15%;
+    background-color: #FFCF56;
+}
+
+.input {
+    border-radius: 2em;
+    height: 3em;
+    width: 25%;
+}
