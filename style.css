@@ -91,6 +91,15 @@ body {
     background-color: #625D6F;
 }
 
+#signOutButton{
+    border-radius: 2em;
+    height: 3.5em;
+    width: 200px;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
 #conteneurHaut {
     display: flex;
     justify-content: space-evenly;
@@ -98,15 +107,41 @@ body {
     color: white;
 }
 
+#date {
+    margin-bottom: 1em;
+}
+
 .bouton {
     border-radius: 2em;
     height: 3.5em;
     width: 15%;
     background-color: #FFCF56;
+    margin-top: 2em;
 }
 
 .input {
     border-radius: 2em;
     height: 3em;
     width: 25%;
+    margin-top: 2em;
+}
+
+#conteneurBas {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 3em;
+}
+
+.card {
+    background-color: white;
+    border-radius: 2em;
+    height: 555px;
+    width: 40%;
+    margin: 1em;
+}
+
+.cardTitle {
+
 }

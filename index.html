@@ -16,14 +16,14 @@
                 <li class="paragraphe"> <a href="#">Visiteurs   </a> </li>
                 <li class="paragraphe"> <a href="#">Rédacteurs</a> </li>
                 <li class="paragraphe"> <a href="#">Chercheurs</a> </li>
-                <li class="paragraphe"> <button> Déconnexion </button></li>
+                <li class="paragraphe"> <button id="signOutButton"> Déconnexion </button></li>
             </ul>
         </nav>
     </header>
 
     <div id="conteneurHaut">
         <div id="contenuHaut">
-            <p> 01 février 2021 </p>
+            <p id="date"> 01 février 2021 </p>
             <h1> Bonjour Marie </h1>
         </div>
         <button class="bouton">Ajouter un utilisateur </button>
@@ -31,7 +31,18 @@
     </div>
 
     <div id="conteneurBas">
-        <ul id="visiteurs"> </ul>
+        <div class="card">
+            <h2 class="cardTitle">Visiteurs</h2>
+            <ul id="visiteurs"> </ul>
+        </div>
+        <div class="card">
+            <h2 class="cardTitle">Rédacteurs</h2>
+            <ul id="redacteurs"> </ul>
+        </div>
+        <div class="card">
+            <h2 class="cardTitle">Chercheurs</h2>
+            <ul id="chercheurs"> </ul>
+        </div>
     </div>
     
 
