@@ -41,9 +41,11 @@ fetch(url)
     data.forEach(visiteur => {
         console.log(visiteur);
         visiteurs.insertAdjacentHTML('beforeend', `
-        <li> 
-            ${visiteur.nom} 
+        <li class="listeVisiteurs"> 
+            <h4> ${visiteur.nom} </h4>
+            <p class="paragraphe"> Matricule : ${visiteur.id} </p>
         </li>
+        <hr class="ligneLi">
         `);
     });
 }))
@@ -51,11 +53,6 @@ fetch(url)
     console.log(e);
 });
 
-/* UTILISATEUR */
 
-//Créer un utilisateur  --> POST http://localhost:90/gsb/user
-//Récupérer la liste des utilisateurs --> GET http://localhost:90/gsb/user
-//Récupérer un utilisateur --> POST http://localhost:90/gsb/user/{id}
-//Supprimer un utilisateur --> DELETE http://localhost:90/gsb/user/{id}
 
 

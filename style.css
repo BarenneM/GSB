@@ -67,7 +67,9 @@ nav
 li
 {
     list-style: none;
-    margin: 4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3em;
 }
 
 ul
@@ -76,11 +78,11 @@ ul
 }
 
 
-a
+/* a
 {
     text-decoration: none;
     color: white;
-}
+} */
 
 a:hover
 {
@@ -111,6 +113,16 @@ body {
     margin-bottom: 1em;
 }
 
+.lienNav {
+    text-decoration: none;
+    color: white;
+}
+
+.lienBasDeCard {
+    text-decoration: none;
+    color: #474350;
+}
+
 .bouton {
     border-radius: 2em;
     height: 3.5em;
@@ -135,6 +147,7 @@ body {
 }
 
 .card {
+    position: relative;
     background-color: white;
     border-radius: 2em;
     height: 555px;
@@ -143,5 +156,58 @@ body {
 }
 
 .cardTitle {
+    display: flex;
+    margin-top: 1em;
+    margin-left: 2em;
+    color: #474350;
+}
 
+.logo {
+    margin-top: 0.3em;
+    height: 70%;
+}
+
+#visiteurs {
+    display: block;
+    color: #474350;
+    margin-top: 4em;
+}
+
+#redacteurs {
+    display: block;
+    color: #474350;
+    margin-top: 4em;
+}
+
+#chercheurs {
+    display: block;
+    color: #474350;
+    margin-top: 4em;
+}
+
+.listeVisiteurs {
+    display: block;
+}
+
+.ligneCard {
+    margin-top: 2em;
+}
+
+.ligneLi {
+    margin-right: 3em;
+    margin-left: 3em;
+}
+
+.basDeCard{
+    position: absolute;
+    bottom: 30px;
+    left:0px;
+    width: 100%;
+}
+
+.basDeCard p {
+    display: flex;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: center;
 }
