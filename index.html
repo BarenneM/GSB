@@ -1,90 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
 
     <header>
-        <nav>
-            <div class="logo paragraphe"> <img class="logo" src="/CDA/GSB/assets/Capture d’écran 2021-02-12 à 20.04.53.png"> </div>
-            
-            <ul id="nav">
-                <li class="paragraphe"> <a class="lienNav" href="#">Visiteurs   </a> </li>
-                <li class="paragraphe"> <a class="lienNav" href="#">Rédacteurs</a> </li>
-                <li class="paragraphe"> <a class="lienNav" href="#">Chercheurs</a> </li>
-                <li class="paragraphe"> <button id="signOutButton"> Déconnexion </button></li>
+        <nav class="flex">
+            <a href="index.html" class="logo">
+                <img class="logo" src="../assets/images/logo.svg">
+            </a>
+
+            <ul class="flex">
+                <li>
+                    <a href="visiteur.html">Visiteurs</a>
+                </li>
+                <li>
+                    <a href="#">Rédacteurs</a>
+                </li>
+                <li>
+                    <a href="#">Chercheurs</a>
+                </li>
+                <li>
+                    <a href="#" class="btn" id="signOutButton"> Déconnexion </a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <div id="conteneurHaut">
-        <div id="contenuHaut">
-            <p id="date"> 01 février 2021 </p>
-            <h1> Bonjour Marie </h1>
+    <main>
+        <div class="flex">
+            <div>
+                <p id="date"> 01 février 2021 </p>
+                <h1> Bonjour Marie </h1>
+            </div>
+            <a href="add.html" class="btn cta">Ajouter un utilisateur </a>
+            <input type="search" aria-label="Rechercher des utilisateurs" placeholder="Rechercher des utilisateurs">
         </div>
-        <button class="bouton">Ajouter un utilisateur </button>
-        <input class="input">
-    </div>
 
-    <div id="conteneurBas">
+        <div class="flex">
+            <div class="card">
+                <div class="cardHeader">
+                    <h2 class="cardTitle">Visiteurs</h2>
+                    <hr class="ligneCard">
+                </div>
+                <div class="cardBody">
+                    <ul id="visiteurs">
+                        <li class="usersList">
+                            <h4>Doe</h4>
+                            <p>Matricule : 2</p>
+                        </li>
+                    </ul>
+                    <hr class="ligneCard">
+                </div>
+                <div class="cardFooter">
+                    <div class="basDeCard">
+                        <p>
+                            <b>
+                                <a class="showMore" href="#">Voir plus de visiteurs</a>
+                            </b>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
 
-        <div class="card">
-            <h2 class="cardTitle">Visiteurs</h2>
-            <hr class="ligneCard">
-            <ul id="visiteurs" > 
-                <li class="listeVisiteurs"> 
-                    <h4>Doe</h4>
-                    <p class="paragraphe">Matricule : 2</p>
-                </li>
-                <hr class="ligneLi">
-            </ul>
-            <div class="basDeCard">
-                <hr class="ligneCard"> 
-                <p class="paragrapheBold"> <a class="lienBasDeCard" href="#">Voir plus de visiteurs</a></p>
+            <div class="card">
+                <div class="cardHeader">
+                    <h2 class="cardTitle">Visiteurs</h2>
+                    <hr>
+                </div>
+                <div class="cardBody">
+                    <ul id="redacteurs">
+                        <li class="usersList">
+                            <h4>Doe</h4>
+                            <p>Matricule : 1374</p>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="cardFooter">
+                    <div class="basDeCard">
+                        <p>
+                            <b>
+                                <a class="showMore" href="#">Voir plus de visiteurs</a>
+                            </b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="cardHeader">
+                    <h2 class="cardTitle">Visiteurs</h2>
+                    <hr>
+                </div>
+                <div class="cardBody">
+                    <ul id="chercheurs">
+                        <li class="usersList">
+                            <h4>Lopez</h4>
+                            <p>Matricule : 2458</p>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="cardFooter">
+                    <div class="basDeCard">
+                        <p>
+                            <b>
+                                <a class="showMore" href="#">Voir plus de visiteurs</a>
+                            </b>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+    </main>
 
-
-        <div class="card">
-            <h2 class="cardTitle">Rédacteurs</h2>
-            <hr class="ligneCard">
-            <ul id="redacteurs">
-                <li class="listeRedacteurs"> 
-                    <h4>Dupond</h4>
-                    <p class="paragraphe">Matricule : 2364</p>
-                </li>
-                <hr class="ligneLi">
-            </ul>
-            <div class="basDeCard">
-                <hr class="ligneCard"> 
-                <p class="paragrapheBold"> <a class="lienBasDeCard" href="#">Voir plus de rédacteurs</a></p>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <h2 class="cardTitle">Chercheurs</h2>
-            <hr class="ligneCard">
-            <ul id="chercheurs"> 
-                <li class="listeChercheurs"> 
-                    <h4>Lopez</h4>
-                    <p class="paragraphe">Matricule : 9875</p>
-                </li>
-                <hr class="ligneLi">
-            </ul>
-            <div class="basDeCard">
-                <hr class="ligneCard"> 
-                <p class="paragrapheBold"> <a class="lienBasDeCard" href="#">Voir plus de chercheurs</a></p>
-            </div>
-        </div>
-    </div>
-    
 
     <script type="text/javascript" src="app.js"></script>
 </body>
+
 </html>
