@@ -65,10 +65,14 @@ font-family: 'Space Grotesk', sans-serif;
     padding: 0;
 }
 
+html{
+    font-size: 62.5%;
+}
+
 body {
     background-color: #625D6F;
     font-family: 'Open Sans', sans-serif;
-    font-size: 20;
+    font-size: 1.6rem;
 }
 
 header {
@@ -86,25 +90,40 @@ main > div {
 }
 
 /* TYPOGRAPHIE */
-
-h1 {
+h1, h2, h3, h4{
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 72;
+}
+
+/* h1 {
+    font-size: 7.2rem;
 }
 
 h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 48;
+    font-size: 4.8rem;
 }
 
 h3 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 32;
+    font-size: 3.2rem;
 }
 
 h4 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 24;
+    font-size: 2.4rem;
+} */
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
 }
 
 a{
@@ -198,7 +217,7 @@ nav {
 
 nav a {
     color: white;
-    padding: 0 3em;
+    /* padding: 0; */
 }
 
 /*

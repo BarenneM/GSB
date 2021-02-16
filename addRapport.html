@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="flex">
+            <a href="index.html" class="logo">
+                <img class="logo" src="./assets/images/logo.svg">
+            </a>
+
+            <ul class="flex">
+                <li>
+                    <a href="visiteur.html">Visiteurs</a>
+                </li>
+                <li>
+                    <a href="#">Rédacteurs</a>
+                </li>
+                <li>
+                    <a href="#">Chercheurs</a>
+                </li>
+                <li>
+                    <a href="addRapport.html">Rapport</a>
+                </li>
+                <li>
+                    <a href="#" class="btn" id="signOutButton"> Déconnexion </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="flex">
+            <div id="contenuHaut">
+                <p id="date"> 01 février 2021 </p>
+                <h1> Bonjour Marie </h1>
+            </div>
+            <a href="add.html" class="btn cta">Ajouter un utilisateur </a>
+            <input type="search" aria-label="Rechercher des utilisateurs" placeholder="Rechercher des utilisateurs">
+        </div>
+
+        <div class="formGroup">
+            <div class="formGroupHeader">
+                <h2>Nouvel Utilisateur</h2>
+                <hr>
+            </div>
+            <form class="formGroupBody" action="" method="">
+                <div id="employee" class="flex">
+                    <div class="flex">
+                        <label for="name">Nom :</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="flex">
+                        <label for="firstname">Prénom :</label>
+                        <input type="text" name="firstname" id="firstname">
+                    </div>
+                    <div class="flex">
+                        <label for="matricule">Matricule :</label>
+                        <input type="text" name="matricule" id="matricule">
+                    </div>
+                </div>
+                <fieldset>
+                    <div class="flex">
+                        <label for="address">Adresse :</label>
+                        <div id="address" class="flex">
+                            <input type="text" name="addressOne" id="addressOne">
+                            <input type="text" name="addressTwo" id="addressTwo">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div>
+                            <label for="zipcode">Code postal :</label>
+                            <input type="text" name="zipcode" id="zipcode">
+                        </div>
+                        <div>
+                            <label for="city">Ville :</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                    </div>
+                </fieldset>
+                <hr>
+                <fieldset class="flex" id="position">
+                    <label for="position">Fonction :</label>
+                    <div class="flex">
+                        <input type="radio" id="visiteur" name="visiteur" value="visiteur" checked>
+                        <label for="visiteur">Visiteur</label>
+                    </div>
+                    <div class="flex">
+                        <input type="radio" id="redacteur" name="redacteur" value="redacteur">
+                        <label for="redacteur">Redacteur</label>
+                    </div>
+                    <div class="flex">
+                        <input type="radio" id="chercheur" name="chercheur" value="chercheur">
+                        <label for="chercheur">Chercheur</label>
+                    </div>
+                </fieldset>
+                <button type="submit" class="validation">Valider les informations</button>
+            </form>
+        </div>
+    </main>
+
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
