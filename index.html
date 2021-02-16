@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
     <header>
         <nav class="flex">
             <a href="index.html" class="logo">
-                <img class="logo" src="../assets/images/logo.svg">
+                <img class="logo" src="./assets/images/logo.svg">
             </a>
 
             <ul class="flex">
@@ -123,6 +123,23 @@
         </div>
     </main>
 
+
+    <input id="nomMed">
+    <input id="bilan">
+
+    <input type="radio" name="isConvinced" id="convinced"/>
+    <input type="radio" name="isConvinced" id="notConvinced"/>
+
+    <input type="radio" name="isReexamined" id="reexamineded"/>
+    <input type="radio" name="isReexamined" id="notReexamined"/>
+
+    <select name="medicaments" id="medicaments">
+        <option value="med1">Medicament1</option>
+    </select>
+
+    <input type="number" id="nbEchantillon"/>
+
+    <button id="submitRapports">Valider</button>
 
     <script type="text/javascript" src="app.js"></script>
 </body>
