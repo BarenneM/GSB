@@ -29,29 +29,29 @@ const visiteurs = document.querySelector('#visiteurs');
 //Supprimer un rapport --> DELETE http://localhost:90/gsb/rapport/{id}
 
 
-/* VISITEUR */
+/* VISITEURS */
 
 //Récupérer tous les visiteurs
 //GET http://localhost:90/gsb/visiteur
 let url = `http://localhost:90/gsb/visiteur`;
 fetch(url)
-.then(response => response.json()
-.then((data) => {
-    console.log(data);
-    data.forEach(visiteur => {
-        console.log(visiteur);
-        visiteurs.insertAdjacentHTML('beforeend', `
-        <li class="listeVisiteurs"> 
-            <h4> ${visiteur.nom} </h4>
-            <p class="paragraphe"> Matricule : ${visiteur.id} </p>
-        </li>
-        <hr class="ligneLi">
-        `);
+    .then(response => response.json()
+        .then((data) => {
+            console.log(data);
+            data.forEach(visiteur => {
+                console.log(visiteur);
+                visiteurs.insertAdjacentHTML('beforeend', `
+                <li class="usersList"> 
+                    <h4> ${visiteur.nom} </h4>
+                    <p Matricule : ${visiteur.id} </p>
+                </li>
+                `);
+            });
+        }))
+    .catch((e) => {
+        console.log(e);
     });
-}))
-.catch((e) => {
-    console.log(e);
-});
+
 
 
 
