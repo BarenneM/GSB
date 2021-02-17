@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <header>
         <nav class="flex">
             <a href="index.html" class="logo">
@@ -42,66 +41,56 @@
                 <p id="date"> 01 février 2021 </p>
                 <h1> Bonjour Marie </h1>
             </div>
-            <a href="add.html" class="btn cta">Ajouter un utilisateur </a>
+            <a href="addUser.html" class="btn cta">Ajouter un utilisateur </a>
             <input type="search" aria-label="Rechercher des utilisateurs" placeholder="Rechercher des utilisateurs">
         </div>
 
-        <div class="formGroup">
+        <form class="formGroup" action="" method="">
             <div class="formGroupHeader">
-                <h2>Nouvel Utilisateur</h2>
+                <h2>Nom Medicament</h2>
+                <div class="flex">
+                    <p>Nom Visiteur</p>
+                    <p>Date du jour</p>
+                    <input name="motif" rows="5" id="motif" placeholder="Motif"/>
+                </div>
                 <hr>
             </div>
-            <form class="formGroupBody" action="" method="">
-                <div id="employee" class="flex">
-                    <div class="flex">
-                        <label for="name">Nom :</label>
-                        <input type="text" name="name" id="name">
-                    </div>
-                    <div class="flex">
-                        <label for="firstname">Prénom :</label>
-                        <input type="text" name="firstname" id="firstname">
-                    </div>
-                    <div class="flex">
-                        <label for="matricule">Matricule :</label>
-                        <input type="text" name="matricule" id="matricule">
-                    </div>
+            <div class="formGroupBody" id="createRapport" >
+                <div>
+                    <textarea name="bilan" rows="5" id="bilan" placeholder="Bilan"></textarea>
+                    <hr>
                 </div>
-                <fieldset>
-                    <div class="flex">
-                        <label for="address">Adresse :</label>
-                        <div id="address" class="flex">
-                            <input type="text" name="addressOne" id="addressOne">
-                            <input type="text" name="addressTwo" id="addressTwo">
+                <div class="flex">
+                    <div class="flex" id="praticien">
+                        <fieldset class="flex">
+                            <p>Le praticien :</p>
+                                <input type="radio" name="isConvinced" id="convinced"/>
+                                <label for="isConvinced">Convaincu</label>
+                                <input type="radio" name="isConvinced" id="notConvinced"/>
+                                <label for="isConvinced">Non Convaincu</label>
+                        </fieldset>
+                        <fieldset class="flex">
+                            <p>Contre-visite :</p>
+                            <div class="flex">
+                                <input type="radio" name="isReexamined" id="reexamineded"/>
+                                <label for="isReexamined">Oui</label>
+                                <input type="radio" name="isReexamined" id="notReexamined"/>
+                                <label for="isReexamined">Non</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <fieldset class="flex" id="sample">
+                        <p>Nombre échantillons :</p>
+                        <div class="flex">
+                            <select name="medicaments" id="medicaments">
+                                <option value="med1">Medicament1 </option>
+                            </select>
+                            <input type="number" min="1" max="100" id="nbEchantillon"/>
+                            <img src="./assets/images/arrow.svg" alt="Chevron vers la droite">
                         </div>
-                    </div>
-                    <div class="flex">
-                        <div>
-                            <label for="zipcode">Code postal :</label>
-                            <input type="text" name="zipcode" id="zipcode">
-                        </div>
-                        <div>
-                            <label for="city">Ville :</label>
-                            <input type="text" name="city" id="city">
-                        </div>
-                    </div>
-                </fieldset>
-                <hr>
-                <fieldset class="flex" id="position">
-                    <label for="position">Fonction :</label>
-                    <div class="flex">
-                        <input type="radio" id="visiteur" name="visiteur" value="visiteur" checked>
-                        <label for="visiteur">Visiteur</label>
-                    </div>
-                    <div class="flex">
-                        <input type="radio" id="redacteur" name="redacteur" value="redacteur">
-                        <label for="redacteur">Redacteur</label>
-                    </div>
-                    <div class="flex">
-                        <input type="radio" id="chercheur" name="chercheur" value="chercheur">
-                        <label for="chercheur">Chercheur</label>
-                    </div>
-                </fieldset>
-                <button type="submit" class="validation">Valider les informations</button>
+                    </fieldset>
+                </div>
+                <button type="submit" class="validation" id="submitRapports">Valider les informations</button>
             </form>
         </div>
     </main>

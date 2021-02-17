@@ -1,0 +1,385 @@
+/*
+*
+*
+* OUTILS
+*
+*
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500&display=swap');
+/* 
+font-family: 'Open Sans', sans-serif;
+font-family: 'Space Grotesk', sans-serif;
+*/
+
+.flex{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.btn{
+border-radius: 25px;
+border: 1px solid white;
+padding: 0.5em 3em;
+}
+
+.cta {
+border: none;
+background-color: rgba(255, 207, 86, 0.8);
+color: #474350;
+}
+
+.validation{
+background: rgba(134, 186, 161, 0.8);
+width: 100%;
+margin-top: 2em;
+padding: 1em;
+}
+
+.card {
+background-color: white;
+border-radius: 25px;
+width: 30%;
+}
+
+.cardTitle {
+margin-top: 1em;
+margin-left: 2em;
+color: #474350;
+}
+
+.formGroup{
+flex-flow: row wrap;
+position: relative;
+}
+
+.formGroup input{
+padding: 0;
+border-radius: 0;
+border: 1px solid lightgray;
+border-bottom: 1px solid #474350;
+}
+
+.formGroupHeader{
+background-color: white;
+padding: 2em 6em 0;
+}
+
+.formGroupHeader > div.flex{
+margin-top: 1rem;
+width: 50%;
+}
+
+.formGroupBody{
+background-color: white;
+position: absolute;
+width: 100%;
+}
+
+.formGroupBody > div {
+margin-top: 2rem;
+}
+
+/*
+*
+*
+* GLOBAL
+*
+*
+*/
+
+*
+{
+margin: 0;
+padding: 0;
+-webkit-font-smoothing : antialiased;
+}
+
+html{
+font-size: 62.5%;
+}
+
+body {
+background-color: #625D6F;
+font-family: 'Open Sans', sans-serif;
+font-size: 1.6rem;
+}
+
+header {
+background-color: #474350;
+color: white;
+}
+
+main {
+width: 90%;
+margin: 0 auto;
+}
+
+main > div {
+margin-top: 3em;
+}
+
+/* TYPOGRAPHIE */
+
+h1, h2, h3, h4{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+    color: #474350;
+}
+
+em {
+    font-style: italic;
+}
+
+b {
+    font-weight: bold;
+}
+
+/* LISTES ET ICONOGRAPHIE */
+
+ul {
+    font-weight: 100;
+}
+
+li {
+    list-style: none;
+    margin: 1em 0 1em 3em;
+}
+
+.logo {
+    height: 100%;
+}
+
+hr {
+    margin: 2em 0 0;
+    border: none;
+    height: 1px;
+    background-color: #474350;
+}
+
+/* FORMULAIRE */
+
+form{
+    margin-top: 5vh;
+}
+
+fieldset{
+    border: none;
+}
+
+textarea{
+    /* border: none; */
+    width: 100%;
+    /* margin-top: 2em ; */
+    border: 1px solid lightgray;
+    border-bottom: 1px solid #474350;
+    padding: 0.5em;
+}
+
+input{
+    border: none;
+    border-radius: 25px;
+    height: 3em;
+    width: 30%;
+    padding: 0.5em 2em;
+}
+
+input[type="radio"]{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1em;
+}
+
+input[type="radio"] + label {
+    margin-right: 1em;
+}
+
+input[type="number"]{
+    padding: 0 1em;
+    margin-left: 5rem;
+}
+
+select{
+    padding: 0.5em 0;
+    border: none;
+    font-size: 1.6rem;
+    letter-spacing: 0.025em;
+}
+
+button{
+    font-size: 1.6rem;
+    letter-spacing: 0.03em;
+    border: none;
+}
+
+/* HOVER, FOCUS, ACTIVE */
+
+.cta:hover{
+    background-color: rgba(255, 207, 86, 1);
+}
+
+.validation:hover{
+    background-color: rgba(134, 186, 161, 1);
+}
+
+.btn:hover,
+button:hover,
+input:hover,
+textarea:hover{
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
+}
+
+/* BEFORE ET AFTER */
+
+.usersList::after{
+    content: "";
+    display: block;
+    margin: 2em 0;
+    border-bottom: 1px solid #474350;
+}
+
+.usersList:last-child::after{
+    content: "";
+    display: none;
+}
+
+.formGroup::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 50px solid #625D6F;
+    border-right: 50px solid transparent;
+}
+
+/*
+*
+*
+* HEADER
+*
+*
+*/
+
+nav {
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+}
+
+nav a {
+    color: white;
+}
+
+/*
+*
+*
+* MAIN
+*
+*
+*/
+
+/* HOME */
+
+main > div:first-child {
+    color: white;
+    align-items: flex-end;
+}
+
+.showMore {
+    text-decoration: none;
+    color: #474350;
+}
+
+.cardFooter {
+    padding: 2em;
+    text-align: center;
+}
+
+/* LISTE VISITEURS */
+
+.listContainer{
+    background-color: white;
+    padding: 2em 6em;
+}
+
+.listContainer ul > li.flex{
+    margin-left: 0;
+}
+
+.listContainerBody img{
+    width: 3%;
+}
+
+.listContainerBody img:last-child{
+    height: 40px;
+}
+
+/* AJOUT UTILISATEUR */
+
+.formGroupBody > fieldset,
+.formGroupBody > textarea,
+.formGroupBody > div {
+    padding: 0 6em;
+}
+
+.formGroupBody #address{
+    flex-direction: column;
+    width: 100%;
+}
+
+fieldset#position{
+    margin-top: 2rem;
+}
+
+fieldset#position > div:last-child{
+    margin-right: 2em;
+}
+
+/* AJOUT RAPPORT */
+
+fieldset > p {
+    margin-right: 2em;
+}
+
+#praticien, #sample{
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-start;
+}
+
+#praticien fieldset{
+    margin-bottom: 2rem;
+} 
+
+#praticien fieldset:last-child{
+    margin-bottom: 0;
+}
+
+#sample div{
+    width: 100%;
+}
+
+#sample img{
+    width: 3%;
+}
