@@ -26,35 +26,28 @@ const visiteurs = document.querySelector('#visiteurs');
 //Récupérer un rapport par son ID  --> GET http://localhost:90/gsb/rapport/{id}
 
 //Poster un rapport --> POST  http://localhost:90/gsb/visiteur/1/rapport
-const keyword = document.querySelector('#keyword');
-const bouton = document.querySelector("#bouton");
-
-submitRapports.addEventListener('click', (event) => {
-    event.preventDefault();
-    const nomMed = document.querySelector('#nomMed');
-    const bilan = document.querySelector('#bilan');
-    const radioButtonConviced = document.querySelectorAll('[name= "isConvinced"]');
-    const radioButtonReexaminated = document.querySelectorAll('[name= "isReexamined"]');
-    const medicaments = document.querySelector('#medicaments');
+const motif = document.querySelector('#motif');
+const bilan = document.querySelector('#bilan');
+const form = document.querySelector('form');
+const bouton = document.querySelector('#submitRapports');
     
-    const nomMedValue = nomMed.value;
-    const bilanValue = bilan.value;
-    const radioButtonConvicedValue = radioButtonConviced.value;
-    const radioButtonReexaminatedValue = radioButtonReexaminated.value;
-    const medicamentsValue = medicaments.value;
+bouton.addEventListener('click', (event) => {
+    event.preventDefault();
 
+    const id = 3;
+    const urlRapport =  `http://localhost:90/gsb/visiteur/${id}/rapport`; 
 
-    console.log(nomMedValue);
-    console.log(bilanValue);
-    console.log(radioButtonConvicedValue);
-    console.log(radioButtonReexaminatedValue);
-    console.log(medicamentsValue);
+    /* SANS FORMDATA */
 
-    // const url = 'http://localhost:90/gsb/visiteur/1/rapport';
-
-    // fetch(url, {
+    // fetch(urlRapport, {
     //     method: 'POST',
-    //     body: JSON.stringify({query: event.currentTarget.value })
+    //     body: JSON.stringify({
+    //         motif: motif.value,
+    //         bilan: bilan.value
+    //     }),
+    //     headers: { 
+    //         'Content-Type': 'application/json'
+    //     }
     // })
     // .then(response => response.json())
     // .then((data) => {
@@ -62,11 +55,37 @@ submitRapports.addEventListener('click', (event) => {
     // })
     // .catch((e) => {
     //     console.log(e);
-    // });
+    // });  
+
+
+    /* AVEC FORM DATA */
+    const formData = new FormData();
+    var newRapport = {
+        motif: motif.value,
+        bilan: bilan.value
+    };
+        
+    formData.forEach(function(value, key){
+        object[key] = value;
+    });
+
+    var json = JSON.stringify(newRapport);
+
+    fetch(urlRapport, {
+        method: 'POST',
+        body: json,
+        headers: { 
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((e) => {
+        console.log(e);
+    });  
 });
-
-
-
 
 //Modifier un rapport --> PUT http://localhost:90/gsb/rapport/{id}
 //Supprimer un rapport --> DELETE http://localhost:90/gsb/rapport/{id}
@@ -76,8 +95,8 @@ submitRapports.addEventListener('click', (event) => {
 
 //Récupérer tous les visiteurs
 //GET http://localhost:90/gsb/visiteur
-let url = `http://localhost:90/gsb/visiteur`;
-fetch(url)
+let urlVisiteur = `http://localhost:90/gsb/visiteur`;
+fetch(urlVisiteur)
     .then(response => response.json()
         .then((data) => {
             console.log(data);
