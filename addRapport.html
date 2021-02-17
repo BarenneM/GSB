@@ -45,19 +45,19 @@
             <input type="search" aria-label="Rechercher des utilisateurs" placeholder="Rechercher des utilisateurs">
         </div>
 
-        <div class="formGroup">
+        <form class="formGroup" action="" method="">
             <div class="formGroupHeader">
                 <h2>Nom Medicament</h2>
                 <div class="flex">
                     <p>Nom Visiteur</p>
                     <p>Date du jour</p>
-                    <p>Motif</p>
+                    <input name="motif" rows="5" id="motif" placeholder="Motif"/>
                 </div>
                 <hr>
             </div>
-            <form class="formGroupBody" action="" method="">
+            <div class="formGroupBody" id="createRapport" >
                 <div>
-                    <textarea name="bilan" rows="5" id="bilan"></textarea>
+                    <textarea name="bilan" rows="5" id="bilan" placeholder="Bilan"></textarea>
                     <hr>
                 </div>
                 <div class="flex">
@@ -83,13 +83,14 @@
                         <p>Nombre échantillons :</p>
                         <div class="flex">
                             <select name="medicaments" id="medicaments">
-                                <option value="med1">Medicament1</option>
+                                <option value="med1">Medicament1 </option>
                             </select>
-                            <input type="number" id="nbEchantillon"/>
+                            <input type="number" min="1" max="100" id="nbEchantillon"/>
+                            <img src="./assets/images/arrow.svg" alt="Chevron vers la droite">
                         </div>
                     </fieldset>
                 </div>
-                <button type="submit" class="validation">Valider les informations</button>
+                <button type="submit" class="validation" id="submitRapports">Valider les informations</button>
             </form>
         </div>
     </main>

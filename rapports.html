@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="flex">
+            <a href="index.html" class="logo">
+                <img class="logo" src="./assets/images/logo.svg">
+            </a>
+
+            <ul class="flex">
+                <li>
+                    <a href="#">Visiteurs</a>
+                </li>
+                <li>
+                    <a href="#">Rédacteurs</a>
+                </li>
+                <li>
+                    <a href="#">Chercheurs</a>
+                </li>
+                <li>
+                    <a href="addRapport.html">Rapport</a>
+                </li>
+                <li>
+                    <a href="#" class="btn" id="signOutButton"> Déconnexion </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="flex">
+            <div id="contenuHaut">
+                <p id="date"> 01 février 2021 </p>
+                <h1> Bonjour Marie </h1>
+            </div>
+            <a href="addUser.html" class="btn cta">Ajouter un rapport </a>
+            <input type="search" aria-label="Rechercher des rapports" placeholder="Rechercher des rapports">
+        </div>
+
+        <div class="listContainer">
+            <div class="listContainerHeader">
+                <h2>Liste des visiteurs</h2>
+                <hr>
+            </div>
+            <div class="listContainerBody">
+                <ul>
+                    <li class="flex">
+                        <img src="./assets/images/file.svg" alt="Image représentant un dossier">
+                        <h3>John Doe</h3>
+                        <p>
+                            <strong>2456</strong>
+                        </p>
+                        <p>01/02/2021</p>
+                        <img src="./assets/images/arrow.svg" alt="Chevron vers la droite">
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
