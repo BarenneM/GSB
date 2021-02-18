@@ -1,4 +1,29 @@
+
+/* VISITEURS */
+
 const visiteurs = document.querySelector('#visiteurs');
+
+//Récupérer tous les visiteurs
+//GET http://localhost:90/gsb/visiteur
+let urlVisiteur = `http://localhost:90/gsb/visiteur`;
+fetch(urlVisiteur)
+    .then(response => response.json()
+        .then((data) => {
+            console.log(data);
+            data.forEach(visiteur => {
+                console.log(visiteur);
+                visiteurs.insertAdjacentHTML('beforeend', `
+                    <li class="usersList"> 
+                        <h4> ${visiteur.nom} </h4>
+                        <p> Matricule : ${visiteur.id} </p>
+                    </li>
+                `);
+            });
+        }))
+    .catch((e) => {
+        console.log(e);
+    });
+
 
 /* RAPPORT */
 
@@ -25,11 +50,13 @@ const visiteurs = document.querySelector('#visiteurs');
 
 //Récupérer un rapport par son ID  --> GET http://localhost:90/gsb/rapport/{id}
 
+
 //Poster un rapport --> POST  http://localhost:90/gsb/visiteur/1/rapport
 const motif = document.querySelector('#motif');
 const bilan = document.querySelector('#bilan');
 const form = document.querySelector('form');
 const bouton = document.querySelector('#submitRapports');
+console.log(bouton);
     
 bouton.addEventListener('click', (event) => {
     event.preventDefault();
@@ -89,30 +116,6 @@ bouton.addEventListener('click', (event) => {
 
 //Modifier un rapport --> PUT http://localhost:90/gsb/rapport/{id}
 //Supprimer un rapport --> DELETE http://localhost:90/gsb/rapport/{id}
-
-
-/* VISITEURS */
-
-//Récupérer tous les visiteurs
-//GET http://localhost:90/gsb/visiteur
-let urlVisiteur = `http://localhost:90/gsb/visiteur`;
-fetch(urlVisiteur)
-    .then(response => response.json()
-        .then((data) => {
-            console.log(data);
-            data.forEach(visiteur => {
-                console.log(visiteur);
-                visiteurs.insertAdjacentHTML('beforeend', `
-                <li class="usersList"> 
-                    <h4> ${visiteur.nom} </h4>
-                    <p> Matricule : ${visiteur.id} </p>
-                </li>
-                `);
-            });
-        }))
-    .catch((e) => {
-        console.log(e);
-    });
 
 
 
