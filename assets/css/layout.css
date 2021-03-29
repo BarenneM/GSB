@@ -49,7 +49,8 @@ margin-left: 2em;
 color: #474350;
 }
 
-.formGroup{
+.formGroup,
+.rapportDetailsGroup{
 flex-flow: row wrap;
 position: relative;
 }
@@ -61,23 +62,27 @@ border: 1px solid lightgray;
 border-bottom: 1px solid #474350;
 }
 
-.formGroupHeader{
+.formGroupHeader,
+.rapportDetailsGroupHeader{
 background-color: white;
 padding: 2em 6em 0;
 }
 
-.formGroupHeader > div.flex{
+.formGroupHeader > div.flex,
+.rapportDetailsGroupHeader > div.flex{
 margin-top: 1rem;
 width: 50%;
 }
 
-.formGroupBody{
+.formGroupBody,
+.rapportDetailsGroupBody{
 background-color: white;
 position: absolute;
 width: 100%;
 }
 
-.formGroupBody > div {
+.formGroupBody > div,
+.rapportDetailsGroupBody > div {
 margin-top: 2rem;
 }
 
@@ -109,6 +114,7 @@ font-size: 1.6rem;
 header {
 background-color: #474350;
 color: white;
+height: 10vh;
 }
 
 main {
@@ -116,7 +122,7 @@ width: 90%;
 margin: 0 auto;
 }
 
-main > div {
+main > section {
 margin-top: 3em;
 }
 
@@ -188,9 +194,7 @@ fieldset{
 }
 
 textarea{
-    /* border: none; */
     width: 100%;
-    /* margin-top: 2em ; */
     border: 1px solid lightgray;
     border-bottom: 1px solid #474350;
     padding: 0.5em;
@@ -243,6 +247,7 @@ button{
 }
 
 .btn:hover,
+.card:hover,
 button:hover,
 input:hover,
 textarea:hover{
@@ -259,12 +264,13 @@ textarea:hover{
     border-bottom: 1px solid #474350;
 }
 
-.usersList:last-child::after{
+.usersList:last-child::after {
     content: "";
     display: none;
 }
 
-.formGroup::before{
+.formGroup::before,
+.rapportDetailsGroup::before {
     content: "";
     position: absolute;
     width: 0;
@@ -282,8 +288,8 @@ textarea:hover{
 */
 
 nav {
-    width: 90%;
     height: 10vh;
+    width: 90%;
     margin: auto;
 }
 
@@ -299,9 +305,25 @@ nav a {
 *
 */
 
+/* AUTHENTICATION */
+#authentication {
+    height: 75vh;
+    flex-direction: column;
+}
+
+#authentication img {
+    width: 30%;
+}
+
+#authentication form {
+    width: 100%;
+    height: 60%;
+    flex-direction: column;
+}
+
 /* HOME */
 
-main > div:first-child {
+main > section:first-child {
     color: white;
     align-items: flex-end;
 }
@@ -316,22 +338,22 @@ main > div:first-child {
     text-align: center;
 }
 
-/* LISTE VISITEURS */
+/* LISTES VISITEURS, REDACTEURS, CHERCHEURS, RAPPORTS */
 
-.listContainer{
+.listContainer {
     background-color: white;
     padding: 2em 6em;
 }
 
-.listContainer ul > li.flex{
+.listContainer ul > li.flex {
     margin-left: 0;
 }
 
-.listContainerBody img{
+.listContainerBody img {
     width: 3%;
 }
 
-.listContainerBody img:last-child{
+.listContainerBody img:last-child {
     height: 40px;
 }
 
@@ -343,12 +365,12 @@ main > div:first-child {
     padding: 0 6em;
 }
 
-.formGroupBody #address{
+.formGroupBody #address {
     flex-direction: column;
     width: 100%;
 }
 
-fieldset#position{
+fieldset#position {
     margin-top: 2rem;
 }
 
@@ -362,24 +384,35 @@ fieldset > p {
     margin-right: 2em;
 }
 
-#praticien, #sample{
+#praticien, #sample {
     flex-direction: column;
     width: 50%;
     align-items: flex-start;
 }
 
-#praticien fieldset{
+#praticien fieldset {
     margin-bottom: 2rem;
 } 
 
-#praticien fieldset:last-child{
+#praticien fieldset:last-child {
     margin-bottom: 0;
 }
 
-#sample div{
+#sample div {
     width: 100%;
 }
 
-#sample img{
+#sample img {
     width: 3%;
+}
+
+/* RAPPORT DETAILS */
+#rapportDetails img{
+    width: 1.5%;
+    display: inline-block;
+}
+
+#rapportDetails article{
+    padding: 2em 6em;
+    width: inherit;
 }

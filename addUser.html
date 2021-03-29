@@ -17,16 +17,19 @@
 
             <ul class="flex">
                 <li>
-                    <a href="visiteur.html">Visiteurs</a>
+                    <a href="visiteurs.html">Visiteurs</a>
                 </li>
                 <li>
-                    <a href="#">Rédacteurs</a>
+                    <a href="redacteurs.html">Rédacteurs</a>
                 </li>
                 <li>
-                    <a href="#">Chercheurs</a>
+                    <a href="chercheurs.html">Chercheurs</a>
                 </li>
                 <li>
-                    <a href="addRapport.html">Rapport</a>
+                    <a href="addRapport.html">Ajout Rapport</a>
+                </li>
+                <li>
+                    <a href="rapports.html">Rapports</a>
                 </li>
                 <li>
                     <a href="#" class="btn" id="signOutButton"> Déconnexion </a>
@@ -36,21 +39,21 @@
     </header>
 
     <main>
-        <div class="flex">
+        <section class="flex">
             <div id="contenuHaut">
                 <p id="date"> 01 février 2021 </p>
                 <h1> Bonjour Marie </h1>
             </div>
             <a href="addUser.html" class="btn cta">Ajouter un utilisateur </a>
             <input type="search" aria-label="Rechercher des utilisateurs" placeholder="Rechercher des utilisateurs">
-        </div>
+        </section>
 
-        <div class="formGroup">
+        <form class="formGroup" action="" method="">
             <div class="formGroupHeader">
                 <h2>Nouvel Utilisateur</h2>
                 <hr>
             </div>
-            <form class="formGroupBody" action="" method="">
+            <div class="formGroupBody" id="createRapport" >
                 <div id="employee" class="flex">
                     <div class="flex">
                         <label for="name">Nom :</label>
@@ -100,13 +103,12 @@
                         <label for="chercheur">Chercheur</label>
                     </div>
                 </fieldset>
-                <button type="submit" class="validation">Valider les informations</button>
-            </form>
-        </div>
+                <button type="submit" class="validation" id="submitRapports">Valider les informations</button>
+        </form>
     </main>
 
 
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
 
 </html>

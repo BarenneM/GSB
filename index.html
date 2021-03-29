@@ -17,7 +17,7 @@
 
             <ul class="flex">
                 <li>
-                    <a href="visiteur.html">Visiteurs</a>
+                    <a href="visiteurs.html">Visiteurs</a>
                 </li>
                 <li>
                     <a href="#">Rédacteurs</a>
@@ -26,7 +26,10 @@
                     <a href="#">Chercheurs</a>
                 </li>
                 <li>
-                    <a href="addRapport.html">Rapport</a>
+                    <a href="addRapport.html">Ajout Rapport</a>
+                </li>
+                <li>
+                    <a href="rapports.html">Rapports</a>
                 </li>
                 <li>
                     <a href="#" class="btn" id="signOutButton"> Déconnexion </a>
@@ -36,17 +39,17 @@
     </header>
 
     <main>
-        <div class="flex">
+        <section class="flex">
             <div>
                 <p id="date"> 01 février 2021 </p>
                 <h1> Bonjour Marie </h1>
             </div>
             <a href="addUser.html" class="btn cta">Ajouter un utilisateur </a>
             <input type="search" aria-label="Rechercher des utilisateurs" placeholder="Rechercher des utilisateurs">
-        </div>
+        </section>
 
-        <div class="flex">
-            <div class="card">
+        <section class="flex">
+            <article class="card">
                 <div class="cardHeader">
                     <h2 class="cardTitle">Visiteurs</h2>
                     <hr class="ligneCard">
@@ -69,10 +72,10 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </article>
 
 
-            <div class="card">
+            <article class="card">
                 <div class="cardHeader">
                     <h2 class="cardTitle">Redacteurs</h2>
                     <hr>
@@ -95,10 +98,10 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </article>
 
 
-            <div class="card">
+            <article class="card">
                 <div class="cardHeader">
                     <h2 class="cardTitle">Chercheurs</h2>
                     <hr>
@@ -121,12 +124,12 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
     </main>
 
 
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
 
 </html>
