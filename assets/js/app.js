@@ -116,8 +116,3 @@ bouton.addEventListener('click', (event) => {
 
 //Modifier un rapport --> PUT http://localhost:90/gsb/rapport/{id}
 //Supprimer un rapport --> DELETE http://localhost:90/gsb/rapport/{id}
-
-
-
-
-

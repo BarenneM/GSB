@@ -1,3 +1,7 @@
+/*
+* Mobile minimum
+*/
+
 @media screen and (min-width: 200px) and (max-width: 640px) {
     /* h1 {
         font-size: 7.2rem;

@@ -38,7 +38,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="rapportDetails">
         <section class="flex">
             <div id="contenuHaut">
                 <p id="date"> 01 février 2021 </p>
@@ -48,25 +48,47 @@
             <input type="search" aria-label="Rechercher des utilisateurs" placeholder="Rechercher des utilisateurs">
         </section>
 
-        <section class="listContainer">
-            <div class="listContainerHeader">
-                <h2>Liste des visiteurs</h2>
+        <section class="rapportDetailsGroup">
+            <div class="rapportDetailsGroupHeader">
+                <div>
+                    <a href="rapports.html">
+                        <img src="./assets/images/arrow.svg" alt="Chevron vers la droite">
+                    </a>
+                    <h2>Nom Medicament</h2>
+                </div>
+                <div class="flex">
+                    <p>Jane Doe</p>
+                    <p>Date du jour</p>
+                    <p>Motif</p>
+                </div>
                 <hr>
             </div>
-            <div class="listContainerBody">
-                <ul>
-                    <li class="flex">
-                        <img src="./assets/images/file.svg" alt="Image représentant un dossier">
-                        <h3>John Doe</h3>
+            <article class="rapportDetailsGroupBody">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Sunt quas impedit vel repudiandae deserunt quia expedita iste deleniti, rerum animi! 
+                    Deleniti nihil impedit illo in recusandae nam facilis corrupti ducimus!
+                </p>
+                <hr>
+                <div class="flex">
+                    <div>
                         <p>
-                            <strong>2456</strong>
+                            Le praticien : <b>Convaincu</b>
                         </p>
-                        <p>01/02/2021</p>
-                        <img src="./assets/images/arrow.svg" alt="Chevron vers la droite">
-                    </li>
-                    <hr>
-                </ul>
-            </div>
+                        <p>
+                            Contre-visite : <b>Non</b>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Echantillons Medicament1 : <b>5</b>
+                        </p>
+                        <p>
+                            Echantillons Medicament2 : <b>5</b>
+                        </p>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
 

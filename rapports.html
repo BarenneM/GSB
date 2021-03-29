@@ -17,16 +17,19 @@
 
             <ul class="flex">
                 <li>
-                    <a href="#">Visiteurs</a>
+                    <a href="visiteurs.html">Visiteurs</a>
                 </li>
                 <li>
-                    <a href="#">Rédacteurs</a>
+                    <a href="redacteurs.html">Rédacteurs</a>
                 </li>
                 <li>
-                    <a href="#">Chercheurs</a>
+                    <a href="chercheurs.html">Chercheurs</a>
                 </li>
                 <li>
-                    <a href="addRapport.html">Rapport</a>
+                    <a href="addRapport.html">Ajout Rapport</a>
+                </li>
+                <li>
+                    <a href="rapports.html">Rapports</a>
                 </li>
                 <li>
                     <a href="#" class="btn" id="signOutButton"> Déconnexion </a>
@@ -36,16 +39,16 @@
     </header>
 
     <main>
-        <div class="flex">
+        <section class="flex">
             <div id="contenuHaut">
                 <p id="date"> 01 février 2021 </p>
                 <h1> Bonjour Marie </h1>
             </div>
             <a href="addUser.html" class="btn cta">Ajouter un rapport </a>
             <input type="search" aria-label="Rechercher des rapports" placeholder="Rechercher des rapports">
-        </div>
+        </section>
 
-        <div class="listContainer">
+        <section class="listContainer">
             <div class="listContainerHeader">
                 <h2>Liste des visiteurs</h2>
                 <hr>
@@ -59,16 +62,18 @@
                             <strong>2456</strong>
                         </p>
                         <p>01/02/2021</p>
-                        <img src="./assets/images/arrow.svg" alt="Chevron vers la droite">
+                        <a href="rapportDetails.html">
+                            <img src="./assets/images/arrow.svg" alt="Chevron vers la droite">
+                        </a>
                     </li>
                     <hr>
                 </ul>
             </div>
-        </div>
+        </section>
     </main>
 
 
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
 
 </html>
